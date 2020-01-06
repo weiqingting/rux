@@ -20,12 +20,14 @@
 		"lint:fix": "tslint -c tslint.json \"src/**/*.{js,ts,tsx}\" --fix",
 		"test": "jest",
 		"test:watch": "jest --watch",
-    "release": "standard-version",
-    "commit": "git-cz"
+		"release": "standard-version",
+		"commit": "git add . && git-cz"
 	},
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"@commitlint/cli": "^8.3.4",
+		"@commitlint/config-conventional": "^8.3.4",
 		"fast-deep-equal": "^2.0.1",
 		"immer": "^5.0.0"
 	},
@@ -40,9 +42,11 @@
 		"@types/react": "^16.9.13",
 		"@types/react-dom": "^16.9.4",
 		"commitizen": "^4.0.3",
+		"cz-conventional-changelog": "^3.0.2",
 		"enzyme": "^3.10.0",
 		"enzyme-adapter-react-16": "^1.15.1",
 		"enzyme-to-json": "^3.4.3",
+		"husky": "^3.1.0",
 		"jest": "^24.9.0",
 		"prettier": "^1.19.1",
 		"rimraf": "^3.0.0",
@@ -57,5 +61,10 @@
 		"tslint-plugin-prettier": "^2.0.1",
 		"tslint-react": "^4.1.0",
 		"typescript": "^3.7.3"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
 	}
 }

@@ -14,3 +14,5 @@ npm install rux
 ```js
 
 ```
+
+测试Hasky11
